@@ -4,5 +4,5 @@ To run the code
 `npm run start`
 
 To tun the test
-`npm run test``
+`npm run test`
 
