@@ -1,0 +1,15 @@
+{
+  "name": "testcodeinterview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^25.2.3",
+    "node-fetch": "^2.6.0"
+  }
+}
