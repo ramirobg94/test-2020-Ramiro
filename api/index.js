@@ -14,7 +14,21 @@ const api = {
       url: `${API_ROUTES.invoices}/${invoiceId}`,
       method: "GET",
       context
-    })
+    }),
+  sendInvoiceToPrint: async (context, { invoice }) =>
+    fetch({
+      url: `${API_ROUTES.printer}`,
+      method: "POST",
+      body: invoice,
+      context
+    }),
+    getCustomer: async (context, { customerId }) =>
+    fetch({
+      url: `${API_ROUTES.customers}/${customerId}`,
+      method: "GET",
+      context
+    }),
+    
 };
 
 module.exports = api;

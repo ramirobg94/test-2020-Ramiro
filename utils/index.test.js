@@ -41,3 +41,36 @@ describe("Total amount", () => {
     expect(totalAmount).toBe(0);
   });
 });
+
+describe("Prepare invoice", () => {
+  test("Parepare invoice with date of today", () => {
+    const invoiceToPrint = Invoice.prepareInvoiceToPrint({ invoice: INVOICE_WITH_ITEMS });
+    expect(invoiceToPrint).toEqual({
+      date: "3/31/2020",
+      invoice: "XXX",
+      customer: "YYY",
+      lineItems: [{
+        department: "A01",
+        quantity: 57,
+        product: "A23487",
+        unitPrice: 0.99,
+        price: 56.33
+      }, {
+        department: "A07",
+        quantity: 5,
+        product: "A34578",
+        unitPrice: 80,
+        price: 400
+    }],
+    total: 456.33
+    });
+  });
+});
+
+
+
+
+
+/*
+
+*/

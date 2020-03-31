@@ -2,8 +2,9 @@ const API_ROUTES = {
     login: "login",
     invoices: "invoices",
     products: "products",
-    clients: "clients",
-    deparments: "deparments"
+    customers: "clients",
+    department: "departments",
+    printer: "printer/basic"
   };
 
 module.exports = {
