@@ -88,7 +88,7 @@ const Departments = {
 
 const extractProductsByIdFromInvoice = async (context, {invocice}) => {
   try{
-    const products = Promise.all( extractLineItems({invoice}).map(lineItem =>  
+    const products = await Promise.all( extractLineItems({invoice}).map(lineItem =>  
         Api.getProduct(context, { productId: lineItem.product})
       ))
     const productsById = (products || []).reduce( (byId, product) => ({...byId, [product.id]: {...product}}), {})
